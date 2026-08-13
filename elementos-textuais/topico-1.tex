@@ -1,0 +1,150 @@
+\chapter{INTRODUÇÃO}
+\label{cap:introducao}
+%---------------------------------------------------------
+%Tópicos para o capítulo
+%1. Conceitos gerais, histórico e definição básica
+%2. Sistemas complexos
+%3. Automato Celular e o Computador
+%4. Aplicações de AC em outros campos da ciência
+%5. Formalismo
+%--------------------------------------------------------
+%--John Von Neumann (1947-1957)
+%Stanislaw Ulam (1951-1960)
+%John H Conway (1968-1980)
+%Stephen Wolfram (1983-2012
+%2024-06-29 - leitura: A Brief History of Cellular Automata artigo de 2000
+Inicialmente, antes da proposta da abstração dos Autômatos Celulares, a modelagem de fenômenos naturais, físicos e sociais baseavam-se  em ferramentas matemáticas clássicas, como os sistemas de equações diferenciais. Embora robustas para prever sistemas lineares ou equilíbrios estáticos, são limitadas ao tentar representar dinâmicas complexas não lineares. Fenômenos dinâmicos, como o fluxo de trânsito~\ref{mzamith2013}, segregação social~\ref{duarte2022modelo} e crescimento urbano~\cite{white1993cellular} não são bem representadas com abordagens clássicas, pois dependem das interações locais para fazer emergir seus padrões macros, que as equações globais falhavam ao tentar reproduzir. Havia a necessidade de uma abordagem capaz de os padrões macros complexos.\\
+
+No final dos anos 40, um matemático conhecido como John von Neumann's formulou a seguinte questão: ``\textit{É possível construir um agregado de tais elementos de tal forma que, se for colocado num reservatório, no qual flutuam todos esses elementos, cada um dos quais se tornará, no final, um outro autômato exatamente igual ao original?}''. Era a ideia de auto-reprodução, ele  questionou se seria possível construir um agregado de elementos capaz de gerar outro autômato idêntico a si dentro de um reservatório. A formulação teve a contribuição do físico Stanisław Ulam, que sugeriu a utilização de uma malha discreta, simplificando a geometria do modelo e estabelecendo a relação de vizinhança entre os autômatos. Assim, surge o autômato celular conhecido como Construtor Universal de Von Neumann.\\
+
+Após algumas décadas, nos anos 80, um físico e cientista da computação chamado  Stephen Wolfram realizou significativas contribuições nos estudos sobre Autômatos Celulares - ACs. Um dos seus primeiros trabalhos sobre o tema foi a proposição de um conjunto de ACs chamados de elementares, são ACs unidimensionais que evoluem no tempo de acordo com o estado e no estado de dois vizinhos, as células imediatamente a esquerda e a direta~\cite{wolfram1983statistical}. Wolfram propõe uma nova visão científica, onde o universo e suas dinâmicas complexas poderiam ser descritos por um conjunto de regras discretas e computacionais, em vez de ficarem rigidamente limitados a equações diferenciais contínuas \cite{wolfram2002new,schiff2011cellular}.\\
+
+Atualmente, os ACs consolidaram-se como uma poderosa e crescente ferramenta computacional de modelagem para sistemas complexos e dinâmicos em diversas áreas do conhecimento. Por serem compostos por malhas de unidades simples e homogêneas, as células, que mudam de estado em passos de tempo discretos baseando-se em sua vizinhança imediata, os ACs consegue com base na vizinhança, na interação par-a-par das células, no conjunto de regras simples e na característica de serem autômatos emergir padrões globais complexos.\\
+
+Além de imitar sistemas reais através da simulação, os ACs são sistemas computacionais universais, pois uma vez com o conjunto correto de regras, eles conseguem emular a Máquina de Turing Universal e computar qualquer problema logicamente computável. Atualmente, seu uso estende-se desde o planejamento urbano (simulação de tráfego e ocupação do solo) e ciências biológicas (vida artificial, modelos de presa-predador), até a física quântica, a filosofia da informação, e estudos metafísicos sobre redução e emergência. O mundo hoje compreende que a complexidade não exige equações complexas; ela emerge da simplicidade local interconectada.\\
+
+
+Além de mimetizar sistemas reais através da simulação, os ACs são sistemas computacionais universais, pois, uma vez utilizando o  conjunto correto de regras, conseguem emular a Máquina de Turing Universal e computar qualquer problema logicamente computável. Seu uso estende-se desde o planejamento urbano, como a simulação de tráfego e ocupação do solo, e ciências biológicas, como os trabalhos que desenvolvem modelos de vida artificial. Estudos sobre relações comerciais adotam a teoria dos jogos com o dilema do prisoneiro através de ACs para enter as dinâmicas emergentes dessas relações e o equilíbrio de Nash~\cite{nowak1992evolutionary}. O mundo hoje compreende que a complexidade não exige equações complexas; ela emerge da simplicidade local interconectada.
+
+\section{Objetivos}
+
+\subsection{Objetivos específicos}
+
+\section{Justificativa}
+
+Este trabalho está organizado em Capítulos, onde o Capítulo \ref{} apresenta a fundamentação teórica. Alguns estudos de casos e suas análises são mostradas pelo Capítulo \ref{} e, por fim, a conclusão e trabalhos futuros estão descritos no Capítulo \ref{}.
+
+\chapter{Fundamentação teórica}\label{chp:LABEL_CHP_1}
+
+\section{Autômatos Celulares}\label{sec:LABEL_CHP_1_SEC_A}
+% Capítulo Fundamentação teórica
+%Definção formal do AC
+%   - Autoreprodução
+%   - Jardim do Eden
+%   - Vizinhança
+%   - Condição inicial e de contorno
+%  
+%   - Deterministico x probabilístico
+%   - Regras: sincronas e assicronas
+%   - Reversibilidade
+%Falar os ACs 1D - Wolfran - Nova ciência
+%   - As classes 4
+%   - quantas regras
+%   - entropia
+%   - entropia x 4 classes
+% Falar os AC 2D
+%   - Game of life
+%   - Redras
+%   - Das formas vida
+%   - https://www.youtube.com/watch?v=c-g2BKFDkxg Langton loop
+%   - Vizinhança usual / vizinhança baseada em grafo (variada)
+% Falar os ACs 3D
+% Falar das aplicações reais
+%    - Trânsito
+%    - Pedestre
+%    - Uso da terra
+%    - Ocupação da Terra
+%    - Segreção social
+%    - Modelo de propagação de informação - SEIR
+
+% Capítulo - Estudo de casos
+%    - Condição inicial
+%        - condição de contorno
+%        - Vizinhança utilizada
+%    - Rodar os AC 1D (256)
+%    - Game of Life, Langtom loop (entropia)
+%    Estado final dado a condição inicial
+% Capítulos - conclusão
+
+Autômato Celular - AC - é uma ferramenta matemática que  descreve sistemas complexos e dinâmicos através de um conjunto de regras. Para isso, utiliza-se de uma grade regular de células, onde cada célula representa um conjunto finito de estados. As células trocam de estado de acordo com o passo de tempo, seu próprio estado atual e do estado de uma vizinhança. Dessa forma, as células evoluem no tempo de forma explicita, ou seja, o próximo passo de tempo das células da malha é dado pelo passo atual.
+
+O AC foi proposto na década de 50 pelo matemático alemão Stanislaw Ulam e pelo matemático húngaro Jonh Von Neumann, que trabalhavam no desenvolvimento de um sistema que fosse capaz de se autorreplicar e reproduzir mecanismos auto-reprodutivos. O objetivo era entender melhor esses comportamentos na natureza, no meio biológico. O estudo gerou o chamado Universal Constructor e analisava primariamente malhas unidimensionais e bi-dimensionais infinitas, não descartando dimensões maiores. O tipo de reprodução do Universal Constructor é classificada como asexual por não precisar de outro autômato, o descendente tem apenas um material genético do qual derivar.
+
+Em seguida, diversos matemáticos e físicos começaram a estudar CAs para melhor modelar seus problemas e áreas de domínio. (A Brief History of Cellular Automata)
+
+
+Em seguida, Wolfram realizou  significativas  contribuições teóricas analisando os autômatos elementares. Estes autômatos unidimensionais foram definidos por Wolfram como a classe mais simples de autômatos celulares e que, apesar de sua simplicidade ainda é capaz de reproduzir comportamentos complexos. Nesta classe, cada célula possui apenas dois vizinhos, suas células imediatas à esquerda e à direita se considerarmos uma fita horizontal, e cada célula pode assumir apenas dois estados , $1$ ou $0$ por exemplo. A cada passo discreto de tempo, uma nova fita é gerada e cada célula tem seu comportamento definido pelo seu estado atual e o estado de seus vizinhos. Com essa configuração, os autômatos podem ter até 256 regras, sendo algumas delas equivalentes ou redundantes. Dentre esse conjunto de regras, Wolfram foi capaz de classificar 4 tipos de comportamento dada a evolução do AC:
+
+\begin{itemize}
+    \item Algumas regras fazem o AC evoluir para um estado estacionário e homogêneo depois de certo tempo;
+    \item Certas regras causam padrões repetitivos, porém isolados na malha;
+    \item Um conjunto de regras apresentam comportamento imprevisível (caótico) e sem repetições;
+    \item Um último grupo de regras que geram estruturas complexas e localizadas na malha do AC.
+\end{itemize}(Análise do espaço elementar de autômatos celulares com atualização por prioridade de vizinhança)
+
+
+Formalizando o AC, ele pode ser visto como uma máquina com um número finito de estados. O domínio e o tempo são discretizados em um conjunto de células, formando uma grade regular. É utilizada uma regra de transição para mudança de estado das células. Assim, o AC é definido por um conjunto $(L, S, N$ e $f)$, onde:
+\begin{itemize}
+\item $L$, representa a discretização em uma grade regular, formada por células ($c$) de dimensão espacial $D$;
+\item $S$ é o conjunto finito de estados que a célula pode assumir;
+\item $N$ é a vizinhança adotada, tal que $c \in L \Rightarrow N(c) \in L$, e,
+\item $f:(S,N) \rightarrow S$ é a função de transição.
+\end{itemize}
+
+Um autômato celular pode ser definido como um sistema evolutivo onde elementos em uma malha tem seus comportamentos definidos por um conjunto de regras que aplicadas ao longo do tempo alteram ou não seu estado. O mais simples desses sistemas, também chamado de uni-dimensional, consiste de um vetor de células que podem assumir apenas dois estados: 0 e 1. As regras de um autômato determinam se uma célula permanece ou muda seu estado atual, dependendo de si mesmo ou de células vizinhas. Vizinhança de uma célula *x* é o termo utilizado para definir as células mais próximas que influenciam no estado de *x*, dada uma regra. Uma vizinhança simples de tamanho *1* de uma célula na posição *x* num autômato uni-dimensional seriam as células imediatamente à esquerda *(x - 1)* e à direita *(x + 1)*.
+
+\subsection{A malha do AC}
+A malha do AC define a relação entre as células, podem ter diversas topologias.
+....
+....
+....
+É possível trabalhar com duas estruturas de dados diferentes para representação da malha: como uma matriz de $1$D, $2$D ou $3$D ou como um grafo.....
+
+\subsection{Das vizinhanças: Von Neumann, Moore, Arbitrária}\label{sec:LABEL_CHP_1_SEC_B}
+Em autômatos celulares bi-dimensionais as vizinhanças podem assumir formas mais elaboradas. Normalmente representado por uma estrutura similar à um tabuleiro de xadrez, uma célula em um AC bi-dimensional pode ter sua vizinhança interpretada de maneira mais complexa dado seu caso de uso. A definição de Von Neumann associa a vizinhança de uma célula à orientação ortogonal, então em uma vizinhança de tamanho $n = 1$, consideramos os vizinhos de uma célula $c_{(x,y)}$ sendo os pertencentes ao conjunto $(c_{(x-1,y)}, c_{(x,y-1)}, c_{(x+1,y)}, c_{(x,y+1)})$.
+
+Posteriormente
+
+\subsection{Regras determinísticas e estocásticas}\label{sec:LABEL_CHP_1_SEC_C}
+O conjunto de regras define o comportamento e evolução do sistema. Num sistema determinístico, uma célula obedece regras que levam em conta apenas sua vizinhança. Isso faz com que, para uma mesma entrada, o resultado seja sempre o mesmo. No não-determinístico há a inclusão de probabilidades nas regras, o que torna o resultado variável e incerto para uma mesma entrada.
+
+\subsection{Regras síncronas e assíncronas}\label{sec:LABEL_CHP_1_SEC_d}
+Em um autômato celular síncrono, todo o conjunto de regras é aplicado na malha no mesmo instante de tempo, causando mudanças de estados sincronizadas. O próximo estado da malha depende somente do estado anterior. Aplicações como o Jogo da Vida de Conway são um exemplo de uso de regras síncronas.
+Já no autômato celular assíncrono, cada célula pode ser atualizada de maneira independente ou em subgrupos na malha, em instantes de tempo diferentes. Este tipo de autômato permite a modelagem de comportamentos mais complexos do dia-a-dia, como simulações de trânsito, propagação de doenças, entre outros procedimentos mais dinâmicos.
+
+
+
+
+
+\subsection{Lorem ipsum dolor sit amet}\label{sec:LABEL_CHP_1_SEC_D}
+
+\subsection{Lorem ipsum dolor sit amet}\label{sec:LABEL_CHP_1_SEC_E}
+
+\section{Simulando a disseminação de informações falsas}\label{sec:LABEL_CHP_1_SEC_F}
+
+\subsection{Modelo SEIR}\label{sec:LABEL_CHP_1_SEC_G}
+Originalmente proposto em um contexto epidemiológico, o modelo SEIR visa simular a propagação de doenças por meio de 4 estados que dão nome ao modelo: 
+$(S)$ - Suscetível: Ainda não foi exposto à infecção;
+$(E)$ - Exposto: Teve contato com a infecção;
+$(I)$ - Infectado: Foi contaminado pela infecção;
+$(R)$ - Recuperado: Recuperou-se da infecção.
+Para a mudança entre estados, o modelo descreve a dinâmica por meio de equações diferenciais nas quais utilizamos $\beta$ como taxa de transmissão, $\sigma$ como probabilidade de infecção em caso de exposição e $\gamma$ para taxa de recuperação dada uma infecção.
+Expandindo o conceito e inserindo-o no contexto de redes sociais, uma notícia falsa rapidamente se espalha como um ``conteúdo viral'' entre pessoas que se relacionam, ou seja, estão no mesmo círculo de uma rede social. A ``cura'', ou exposição da notícia como fraudulenta, leva tempo e se prolifera de maneira mais lenta entre as pessoas.
+
+\section{Implementação}\label{sec:LABEL_CHP_1_SEC_H}
+Feito em Java, a implementação usa um grafo direcionado para representar pessoas e seu círculo de influência. Cada pessoa é um vértice nesse grafo e seus relacionamentos com outras pessoas são representados pelas arestas. Neste cenário de um grafo direcionado, uma pessoa pode emitir influência sobre outras ou ser influenciada, criando um cenário de pessoas ``influenciadoras'' e pessoas ``influenciáveis''.
+\section{Lorem ipsum dolor sit amet}\label{sec:LABEL_CHP_1_SEC_I}
+
+\section{Lorem ipsum dolor sit amet}\label{sec:LABEL_CHP_1_SEC_J}
+
+\section{Lorem ipsum dolor sit amet}\label{sec:LABEL_CHP_1_SEC_K}

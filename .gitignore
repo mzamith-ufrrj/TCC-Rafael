@@ -1,0 +1,82 @@
+# ============================================================
+# Projeto LaTeX
+# ============================================================
+
+# Arquivo PDF gerado pelo documento principal
+/main.pdf
+
+# ------------------------------------------------------------
+# Arquivos auxiliares do LaTeX
+# ------------------------------------------------------------
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex.gz(busy)
+
+# Bibliografia
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+
+# Índices, glossários e nomenclaturas
+*.idx
+*.ilg
+*.ind
+*.ist
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.glsdefs
+*.xdy
+
+# Beamer
+*.nav
+*.snm
+*.vrb
+
+# Outros arquivos intermediários
+*.dvi
+*.xdv
+*.ps
+
+# ------------------------------------------------------------
+# Diretórios de compilação, caso sejam utilizados
+# ------------------------------------------------------------
+/build/
+/out/
+
+# ------------------------------------------------------------
+# Arquivos temporários de editores
+# ------------------------------------------------------------
+*~
+*.bak
+*.tmp
+*.swp
+*.swo
+
+# ------------------------------------------------------------
+# Sistema operacional
+# ------------------------------------------------------------
+.DS_Store
+Thumbs.db
+
+# ------------------------------------------------------------
+# VS Code
+# ------------------------------------------------------------
+# O diretório .vscode NÃO é ignorado de propósito.
+# Assim, configurações específicas do projeto LaTeX podem
+# ser compartilhadas pelo Git.
+#
+# Se preferir não versionar configurações do VS Code,
+# descomente a linha abaixo:
+# .vscode/
