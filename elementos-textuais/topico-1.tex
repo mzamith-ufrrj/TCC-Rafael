@@ -76,7 +76,19 @@ Este trabalho está organizado em Capítulos, onde o Capítulo \ref{} apresenta 
 %    Estado final dado a condição inicial
 % Capítulos - conclusão
 
-Autômato Celular - AC - é uma ferramenta matemática que  descreve sistemas complexos e dinâmicos através de um conjunto de regras. Para isso, utiliza-se de uma grade regular de células, onde cada célula representa um conjunto finito de estados. As células trocam de estado de acordo com o passo de tempo, seu próprio estado atual e do estado de uma vizinhança. Dessa forma, as células evoluem no tempo de forma explicita, ou seja, o próximo passo de tempo das células da malha é dado pelo passo atual.
+Autômato Celular - AC - é um modelo matemático que descreve sistemas complexos e dinâmicos através de um conjunto de regras. Para isso, utiliza-se de uma grade regular de células, onde cada célula $c$ representa um conjunto finito de estados. As células podem trocar de estado por meio do conjunto de regras $r$ que são aplicadas a cada passo de tempo $t$. Estas regras definem o estado $t+1$ de uma célula baseado no estado $t$ e também na vizinhança $n$ de $c$.
+
+As células trocam de estado de acordo com o passo de tempo, seu próprio estado atual e do estado de uma vizinhança. Dessa forma, as células evoluem no tempo de forma explicita, ou seja, o próximo passo de tempo das células da malha é dado pelo passo atual.
+
+\subsection{Das vizinhanças: Von Neumann, Moore, Arbitrária}
+Em autômatos celulares bi-dimensionais as vizinhanças podem assumir formas mais elaboradas. Normalmente representado por uma estrutura similar à um tabuleiro de xadrez, uma célula em um AC bi-dimensional pode ter sua vizinhança interpretada de maneira mais complexa dado seu caso de uso. A definição de Von Neumann associa a vizinhança de uma célula à orientação ortogonal, então em uma vizinhança de tamanho $n = 1$, consideramos os vizinhos de uma célula $c_{(x,y)}$ sendo os pertencentes ao conjunto $(c_{(x-1,y)}, c_{(x,y-1)}, c_{(x+1,y)}, c_{(x,y+1)})$.
+
+\subsection{Autômatos determinísticos e não-determinísticos}
+O conjunto de regras define o comportamento e evolução do sistema. Num sistema determinístico, uma célula obedece regras que levam em conta apenas sua vizinhança. Isso faz com que, para uma mesma entrada, o resultado seja sempre o mesmo. No não-determinístico há a inclusão de probabilidades nas regras, o que torna o resultado variável e incerto para uma mesma entrada.
+
+\subsection{Regras síncronas e assíncronas}
+Em um autômato celular síncrono, todo o conjunto de regras é aplicado na malha no mesmo instante de tempo, causando mudanças de estados sincronizadas. O próximo estado da malha depende somente do estado anterior. Aplicações como o Jogo da Vida de Conway são um exemplo de uso de regras síncronas.
+Já no autômato celular assíncrono, cada célula pode ser atualizada de maneira independente ou em subgrupos na malha, em instantes de tempo diferentes. Este tipo de autômato permite a modelagem de comportamentos mais complexos do dia-a-dia, como simulações de trânsito, propagação de doenças, entre outros procedimentos mais dinâmicos.
 
 O AC foi proposto na década de 50 pelo matemático alemão Stanislaw Ulam e pelo matemático húngaro Jonh Von Neumann, que trabalhavam no desenvolvimento de um sistema que fosse capaz de se autorreplicar e reproduzir mecanismos auto-reprodutivos. O objetivo era entender melhor esses comportamentos na natureza, no meio biológico. O estudo gerou o chamado Universal Constructor e analisava primariamente malhas unidimensionais e bi-dimensionais infinitas, não descartando dimensões maiores. O tipo de reprodução do Universal Constructor é classificada como asexual por não precisar de outro autômato, o descendente tem apenas um material genético do qual derivar.
 
@@ -110,17 +122,13 @@ A malha do AC define a relação entre as células, podem ter diversas topologia
 ....
 É possível trabalhar com duas estruturas de dados diferentes para representação da malha: como uma matriz de $1$D, $2$D ou $3$D ou como um grafo.....
 
-\subsection{Das vizinhanças: Von Neumann, Moore, Arbitrária}\label{sec:LABEL_CHP_1_SEC_B}
-Em autômatos celulares bi-dimensionais as vizinhanças podem assumir formas mais elaboradas. Normalmente representado por uma estrutura similar à um tabuleiro de xadrez, uma célula em um AC bi-dimensional pode ter sua vizinhança interpretada de maneira mais complexa dado seu caso de uso. A definição de Von Neumann associa a vizinhança de uma célula à orientação ortogonal, então em uma vizinhança de tamanho $n = 1$, consideramos os vizinhos de uma célula $c_{(x,y)}$ sendo os pertencentes ao conjunto $(c_{(x-1,y)}, c_{(x,y-1)}, c_{(x+1,y)}, c_{(x,y+1)})$.
+
 
 Posteriormente
 
-\subsection{Regras determinísticas e estocásticas}\label{sec:LABEL_CHP_1_SEC_C}
-O conjunto de regras define o comportamento e evolução do sistema. Num sistema determinístico, uma célula obedece regras que levam em conta apenas sua vizinhança. Isso faz com que, para uma mesma entrada, o resultado seja sempre o mesmo. No não-determinístico há a inclusão de probabilidades nas regras, o que torna o resultado variável e incerto para uma mesma entrada.
 
-\subsection{Regras síncronas e assíncronas}\label{sec:LABEL_CHP_1_SEC_d}
-Em um autômato celular síncrono, todo o conjunto de regras é aplicado na malha no mesmo instante de tempo, causando mudanças de estados sincronizadas. O próximo estado da malha depende somente do estado anterior. Aplicações como o Jogo da Vida de Conway são um exemplo de uso de regras síncronas.
-Já no autômato celular assíncrono, cada célula pode ser atualizada de maneira independente ou em subgrupos na malha, em instantes de tempo diferentes. Este tipo de autômato permite a modelagem de comportamentos mais complexos do dia-a-dia, como simulações de trânsito, propagação de doenças, entre outros procedimentos mais dinâmicos.
+
+
 
 
 
