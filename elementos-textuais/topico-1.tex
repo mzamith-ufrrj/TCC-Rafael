@@ -76,9 +76,23 @@ Este trabalho está organizado em Capítulos, onde o Capítulo \ref{} apresenta 
 %    Estado final dado a condição inicial
 % Capítulos - conclusão
 
-Autômato Celular - AC - é um modelo matemático que descreve sistemas complexos e dinâmicos através de um conjunto de regras. Para isso, utiliza-se de uma grade regular de células, onde cada célula $c$ representa um conjunto finito de estados. As células podem trocar de estado por meio do conjunto de regras $r$ que são aplicadas a cada passo de tempo $t$. Estas regras definem o estado $t+1$ de uma célula baseado no estado $t$ e também na vizinhança $n$ de $c$.
-
-As células trocam de estado de acordo com o passo de tempo, seu próprio estado atual e do estado de uma vizinhança. Dessa forma, as células evoluem no tempo de forma explicita, ou seja, o próximo passo de tempo das células da malha é dado pelo passo atual.
+Autômato Celular - AC - é um modelo matemático que descreve sistemas complexos e dinâmicos através de um conjunto de células, estados possíveis de uma célula e regras de transição entre estados. Pode ser definido como $AC = (C, S, N, f)$ onde:
+\begin{itemize}
+    \item $C$ - conjunto de células $c$;
+    \item $S$ - conjunto de estados $s$ possíveis;
+    \item $N$ - vizinhança de uma célula $c$;
+    \item $f$ - regra de transição aplicada a $c$ para definir próximo estado $s$
+\end{itemize}
+%procurar exemplo com contraste maior entre unidimensional e multidimensional?
+A versatilidade desse modelo para representações de sistema varia desde sistemas unidimensionais que podem simular trânsito em uma faixa única de trânsito à sistemas multidimensionais que replicam evacuação de pedestres em ambientes fechados.
+Para simular esses sistemas, uma grade de dimensão $n$ é idealizada para $s_{i}(t)$, estado da i-ésima célula no instante de tempo $t$. Dado $s_{i}(t)$, definimos próximo estado da i-ésima célula por meio da função $s_{i}(t+1) = f(s_{i}(t), N_{i}(t))$ onde:
+%faz sentido explicar si(t+1) e si sendo que já foi explicado?
+\begin{itemize}
+    \item $s_{i}(t+1)$ - estado das células vizinhas de $i$ no instante de tempo $t$;
+    \item $s_{i}(t)$ - estado atual da célula $i$;
+    \item $N_{i}(t)$ - estado das células vizinhas de $i$ no instante de tempo $t$;
+    \item $f(s_{i}(t), N_{i}(t))$ - regra de transição que recebe estado atual da célula $i$ e de sua vizinhança e retorna o próximo estado de $i$
+\end{itemize}
 
 \subsection{Das vizinhanças: Von Neumann, Moore, Arbitrária}
 Em autômatos celulares bi-dimensionais as vizinhanças podem assumir formas mais elaboradas. Normalmente representado por uma estrutura similar à um tabuleiro de xadrez, uma célula em um AC bi-dimensional pode ter sua vizinhança interpretada de maneira mais complexa dado seu caso de uso. A definição de Von Neumann associa a vizinhança de uma célula à orientação ortogonal, então em uma vizinhança de tamanho $n = 1$, consideramos os vizinhos de uma célula $c_{(x,y)}$ sendo os pertencentes ao conjunto $(c_{(x-1,y)}, c_{(x,y-1)}, c_{(x+1,y)}, c_{(x,y+1)})$.
