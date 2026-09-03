@@ -85,16 +85,25 @@ Autômato Celular - AC - é um modelo matemático que descreve sistemas complexo
 \end{itemize}
 %procurar exemplo com contraste maior entre unidimensional e multidimensional?
 A versatilidade desse modelo para representações de sistema varia desde sistemas unidimensionais que podem simular trânsito em uma faixa única de trânsito à sistemas multidimensionais que replicam evacuação de pedestres em ambientes fechados.
-Para simular esses sistemas, uma grade de dimensão $n$ é idealizada para $s_{i}(t)$, estado da i-ésima célula no instante de tempo $t$. Dado $s_{i}(t)$, definimos próximo estado da i-ésima célula por meio da função $s_{i}(t+1) = f(s_{i}(t), N_{i}(t))$ onde:
+Para simular esses sistemas, uma grade de dimensão $n$ é idealizada para $s_{i}(t)$, estado da i-ésima célula no instante de tempo $t$. Dado $s_{i}(t)$, definimos o próximo estado da i-ésima célula por meio da função $s_{i}(t+1) = f(s_{i}(t), N_{i}(t))$ onde:
 %faz sentido explicar si(t+1) e si sendo que já foi explicado?
 \begin{itemize}
-    \item $s_{i}(t+1)$ - estado das células vizinhas de $i$ no instante de tempo $t$;
+    \item $s_{i}(t+1)$ - próximo estado da célula $i$;
     \item $s_{i}(t)$ - estado atual da célula $i$;
     \item $N_{i}(t)$ - estado das células vizinhas de $i$ no instante de tempo $t$;
     \item $f(s_{i}(t), N_{i}(t))$ - regra de transição que recebe estado atual da célula $i$ e de sua vizinhança e retorna o próximo estado de $i$
 \end{itemize}
 
-\subsection{Das vizinhanças: Von Neumann, Moore, Arbitrária}
+O AC foi proposto na década de 50 pelo matemático alemão Stanislaw Ulam e pelo matemático húngaro Jonh Von Neumann, que trabalhavam no desenvolvimento de um sistema que fosse capaz de se autorreplicar e reproduzir mecanismos auto-reprodutivos. O objetivo era entender melhor esses comportamentos na natureza, no meio biológico. O estudo gerou o chamado Universal Constructor e analisava primariamente malhas unidimensionais e bi-dimensionais infinitas, não descartando dimensões maiores. O tipo de reprodução do Universal Constructor é classificada como asexual por não precisar de outro autômato, o descendente tem apenas um material genético do qual derivar.
+
+\subsection{Condições iniciais e de contorno}
+Para começar uma simulação, cada célula precisa assumir um dos estados possíveis descritos no AC para construir uma condição inicial. As regras de transição tem forte influência, inviabilizando configurações de condições iniciais para um AC específico.
+%falar do jardim do Eden aqui
+%falar de contorno apenas depois da vizinhança?
+
+\subsection{Vizinhança}
+No contexto geral, uma vizinhança $N_{i}$ da $i$-ésima célula em um AC é o grupo de outras células normalmente adjacentes que têm influência na determinação do próximo estado da célula $i$. Considerando um autômato unidimensional com $C = \{a, b, c\}$, uma vizinhança de tamanho 1 para a célula $b$ seria o conjunto $\{a, c\}$. O tamanho e o formato de uma vizinhança em um autômato varia de acordo com o propósito da simulação. A variedade fica mais evidente em autômatos de dimensões 2, 3 e seguintes, assumindo formas não convencionais para simulações mais complexas.
+
 Em autômatos celulares bi-dimensionais as vizinhanças podem assumir formas mais elaboradas. Normalmente representado por uma estrutura similar à um tabuleiro de xadrez, uma célula em um AC bi-dimensional pode ter sua vizinhança interpretada de maneira mais complexa dado seu caso de uso. A definição de Von Neumann associa a vizinhança de uma célula à orientação ortogonal, então em uma vizinhança de tamanho $n = 1$, consideramos os vizinhos de uma célula $c_{(x,y)}$ sendo os pertencentes ao conjunto $(c_{(x-1,y)}, c_{(x,y-1)}, c_{(x+1,y)}, c_{(x,y+1)})$.
 
 \subsection{Autômatos determinísticos e não-determinísticos}
@@ -104,11 +113,9 @@ O conjunto de regras define o comportamento e evolução do sistema. Num sistema
 Em um autômato celular síncrono, todo o conjunto de regras é aplicado na malha no mesmo instante de tempo, causando mudanças de estados sincronizadas. O próximo estado da malha depende somente do estado anterior. Aplicações como o Jogo da Vida de Conway são um exemplo de uso de regras síncronas.
 Já no autômato celular assíncrono, cada célula pode ser atualizada de maneira independente ou em subgrupos na malha, em instantes de tempo diferentes. Este tipo de autômato permite a modelagem de comportamentos mais complexos do dia-a-dia, como simulações de trânsito, propagação de doenças, entre outros procedimentos mais dinâmicos.
 
-O AC foi proposto na década de 50 pelo matemático alemão Stanislaw Ulam e pelo matemático húngaro Jonh Von Neumann, que trabalhavam no desenvolvimento de um sistema que fosse capaz de se autorreplicar e reproduzir mecanismos auto-reprodutivos. O objetivo era entender melhor esses comportamentos na natureza, no meio biológico. O estudo gerou o chamado Universal Constructor e analisava primariamente malhas unidimensionais e bi-dimensionais infinitas, não descartando dimensões maiores. O tipo de reprodução do Universal Constructor é classificada como asexual por não precisar de outro autômato, o descendente tem apenas um material genético do qual derivar.
+%Reversibilidade
 
-Em seguida, diversos matemáticos e físicos começaram a estudar CAs para melhor modelar seus problemas e áreas de domínio. (A Brief History of Cellular Automata)
-
-
+%4 classes
 Em seguida, Wolfram realizou  significativas  contribuições teóricas analisando os autômatos elementares. Estes autômatos unidimensionais foram definidos por Wolfram como a classe mais simples de autômatos celulares e que, apesar de sua simplicidade ainda é capaz de reproduzir comportamentos complexos. Nesta classe, cada célula possui apenas dois vizinhos, suas células imediatas à esquerda e à direita se considerarmos uma fita horizontal, e cada célula pode assumir apenas dois estados , $1$ ou $0$ por exemplo. A cada passo discreto de tempo, uma nova fita é gerada e cada célula tem seu comportamento definido pelo seu estado atual e o estado de seus vizinhos. Com essa configuração, os autômatos podem ter até 256 regras, sendo algumas delas equivalentes ou redundantes. Dentre esse conjunto de regras, Wolfram foi capaz de classificar 4 tipos de comportamento dada a evolução do AC:
 
 \begin{itemize}
@@ -117,6 +124,8 @@ Em seguida, Wolfram realizou  significativas  contribuições teóricas analisan
     \item Um conjunto de regras apresentam comportamento imprevisível (caótico) e sem repetições;
     \item Um último grupo de regras que geram estruturas complexas e localizadas na malha do AC.
 \end{itemize}(Análise do espaço elementar de autômatos celulares com atualização por prioridade de vizinhança)
+
+Em seguida, diversos matemáticos e físicos começaram a estudar CAs para melhor modelar seus problemas e áreas de domínio. (A Brief History of Cellular Automata)
 
 
 Formalizando o AC, ele pode ser visto como uma máquina com um número finito de estados. O domínio e o tempo são discretizados em um conjunto de células, formando uma grade regular. É utilizada uma regra de transição para mudança de estado das células. Assim, o AC é definido por um conjunto $(L, S, N$ e $f)$, onde:
